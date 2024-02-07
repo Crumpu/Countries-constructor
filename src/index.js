@@ -11,13 +11,16 @@ function Country(
   this.population = population;
   this.area = area;
   this.showCountry = function () {
-    return `${title},  ${capital},  ${population},  ${area}`;
+    return `title = ${title}, capital = ${capital}, population = ${population}, area = ${area}`;
   };
 }
 
 const USA = new Country('USA', 'Washington', '331.9 million', '9 834 000 km2');
 
 const Japan = new Country('Japan', 'Tokyo', '125.7 million', '377 973 km2');
+
+console.log(Japan.showCountry());
+
 
 function funcCountry(countryObject) {
   for (let key in countryObject) {
@@ -26,4 +29,4 @@ function funcCountry(countryObject) {
     }
   }
 }
-funcCountry(USA)
+funcCountry(USA);
